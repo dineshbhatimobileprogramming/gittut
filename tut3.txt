@@ -1,1 +1,126 @@
-hjhrjhr2sdfsdf
+$ git init
+Initialized empty Git repository in D:/dinesh/delete1/.git/
+
+Administrator@LAPTOP-NRODK4SN MINGW64 /d/dinesh/delete1 (master)
+$ ls
+tu1.txt
+
+Administrator@LAPTOP-NRODK4SN MINGW64 /d/dinesh/delete1 (master)
+$ git add .
+
+Administrator@LAPTOP-NRODK4SN MINGW64 /d/dinesh/delete1 (master)
+$ git commit -am "good one"
+[master (root-commit) 3cf1530] good one
+ 1 file changed, 1 insertion(+)
+ create mode 100644 tu1.txt
+
+Administrator@LAPTOP-NRODK4SN MINGW64 /d/dinesh/delete1 (master)
+$ git remote add origin123 https://github.com/dineshbhatimobileprogramming/gittut.git
+
+Administrator@LAPTOP-NRODK4SN MINGW64 /d/dinesh/delete1 (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+Administrator@LAPTOP-NRODK4SN MINGW64 /d/dinesh/delete1 (master)
+$ git push origin123
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin123 master
+
+
+Administrator@LAPTOP-NRODK4SN MINGW64 /d/dinesh/delete1 (master)
+$ git branch -M main
+
+Administrator@LAPTOP-NRODK4SN MINGW64 /d/dinesh/delete1 (main)
+$ git push -u orgin123 main
+fatal: 'orgin123' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Administrator@LAPTOP-NRODK4SN MINGW64 /d/dinesh/delete1 (main)
+$ git push -u origin123 main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 220 bytes | 220.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/dineshbhatimobileprogramming/gittut.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin123'.
+
+Administrator@LAPTOP-NRODK4SN MINGW64 /d/dinesh/delete1 (main)
+$ git branch newbranch1
+
+Administrator@LAPTOP-NRODK4SN MINGW64 /d/dinesh/delete1 (main)
+$ git branch
+* main
+  newbranch1
+
+Administrator@LAPTOP-NRODK4SN MINGW64 /d/dinesh/delete1 (main)
+$ git checkout newbranch1
+Switched to branch 'newbranch1'
+
+Administrator@LAPTOP-NRODK4SN MINGW64 /d/dinesh/delete1 (newbranch1)
+$ git status
+On branch newbranch1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        tut2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Administrator@LAPTOP-NRODK4SN MINGW64 /d/dinesh/delete1 (newbranch1)
+$ git add .
+
+Administrator@LAPTOP-NRODK4SN MINGW64 /d/dinesh/delete1 (newbranch1)
+$ git commit -am "added newfile to new branch"
+[newbranch1 e872657] added newfile to new branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 tut2.txt
+
+Administrator@LAPTOP-NRODK4SN MINGW64 /d/dinesh/delete1 (newbranch1)
+$ git push -u origin123 newbranch1
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 293 bytes | 293.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'newbranch1' on GitHub by visiting:
+remote:      https://github.com/dineshbhatimobileprogramming/gittut/pull/new/newbranch1
+remote:
+To https://github.com/dineshbhatimobileprogramming/gittut.git
+ * [new branch]      newbranch1 -> newbranch1
+Branch 'newbranch1' set up to track remote branch 'newbranch1' from 'origin123'.
+
+Administrator@LAPTOP-NRODK4SN MINGW64 /d/dinesh/delete1 (newbranch1)
+$ git add .
+
+Administrator@LAPTOP-NRODK4SN MINGW64 /d/dinesh/delete1 (newbranch1)
+$ git commit -am "added newfile 3 to new branch"
+[newbranch1 e6f8a35] added newfile 3 to new branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 tut3.txt
+
+Administrator@LAPTOP-NRODK4SN MINGW64 /d/dinesh/delete1 (newbranch1)
+$ git push -u origin123 newbranch1
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 322 bytes | 322.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/dineshbhatimobileprogramming/gittut.git
+   e872657..e6f8a35  newbranch1 -> newbranch1
+Branch 'newbranch1' set up to track remote branch 'newbranch1' from 'origin123'.
