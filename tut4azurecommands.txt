@@ -1,0 +1,138 @@
+Dinesh.Bhati@INNMBD846ZB53 MINGW64 ~/OneDrive - Worley/Desktop/delete/delete
+$ cd delete
+bash: cd: delete: No such file or directory
+
+Dinesh.Bhati@INNMBD846ZB53 MINGW64 ~/OneDrive - Worley/Desktop/delete/delete
+$ dir
+New\ folder  New\ folder\ (2)  tut1.txt
+
+Dinesh.Bhati@INNMBD846ZB53 MINGW64 ~/OneDrive - Worley/Desktop/delete/delete
+$ git init
+Initialized empty Git repository in C:/Users/Dinesh.Bhati/OneDrive - Worley/Desktop/delete/delete/.git/
+
+Dinesh.Bhati@INNMBD846ZB53 MINGW64 ~/OneDrive - Worley/Desktop/delete/delete (master)
+$ git add .
+
+Dinesh.Bhati@INNMBD846ZB53 MINGW64 ~/OneDrive - Worley/Desktop/delete/delete (master)
+$ git remote add originazure https://worleydigital@dev.azure.com/worleydigital/Demo%20Cloud%20PSE/_git/cloudpse_py_demo
+
+Dinesh.Bhati@INNMBD846ZB53 MINGW64 ~/OneDrive - Worley/Desktop/delete/delete (master)
+$ git fetch originazure
+remote: Azure Repos
+remote: Found 214 objects to send. (125 ms)
+Receiving objects: 100% (214/214), 572.85 KiB | 14.32 MiB/s, done.
+Resolving deltas: 100% (74/74), done.
+From https://dev.azure.com/worleydigital/Demo%20Cloud%20PSE/_git/cloudpse_py_demo
+ * [new branch]      Validation_master -> originazure/Validation_master
+ * [new branch]      Validation_new    -> originazure/Validation_new
+ * [new branch]      Validation_new1   -> originazure/Validation_new1
+ * [new branch]      main              -> originazure/main
+
+Dinesh.Bhati@INNMBD846ZB53 MINGW64 ~/OneDrive - Worley/Desktop/delete/delete (master)
+$ git branch
+
+Dinesh.Bhati@INNMBD846ZB53 MINGW64 ~/OneDrive - Worley/Desktop/delete/delete (master)
+$ git branch -r
+  originazure/Validation_master
+  originazure/Validation_new
+  originazure/Validation_new1
+  originazure/main
+
+Dinesh.Bhati@INNMBD846ZB53 MINGW64 ~/OneDrive - Worley/Desktop/delete/delete (master)
+$ ^C
+
+Dinesh.Bhati@INNMBD846ZB53 MINGW64 ~/OneDrive - Worley/Desktop/delete/delete (master)
+$ git branch newbranch
+fatal: Not a valid object name: 'master'.
+
+Dinesh.Bhati@INNMBD846ZB53 MINGW64 ~/OneDrive - Worley/Desktop/delete/delete (master)
+$ git branch -b newbranch
+error: unknown switch `b'
+usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]
+   or: git branch [<options>] [-l] [-f] <branch-name> [<start-point>]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --verbose         show hash and subject, give twice for upstream branch
+    -q, --quiet           suppress informational messages
+    -t, --track           set up tracking mode (see git-pull(1))
+    -u, --set-upstream-to <upstream>
+                          change the upstream info
+    --unset-upstream      unset the upstream info
+    --color[=<when>]      use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --abbrev[=<n>]        use <n> digits to display object names
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --delete          delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --move            move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    -c, --copy            copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    -l, --list            list branch names
+    --show-current        show current branch name
+    --create-reflog       create the branch's reflog
+    --edit-description    edit the description for the branch
+    -f, --force           force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --column[=<style>]    list branches in columns
+    --sort <key>          field name to sort on
+    --points-at <object>  print only branches of the object
+    -i, --ignore-case     sorting and filtering are case insensitive
+    --format <format>     format to use for the output
+
+
+Dinesh.Bhati@INNMBD846ZB53 MINGW64 ~/OneDrive - Worley/Desktop/delete/delete (master)
+$ git checkout Validation_new
+Switched to a new branch 'Validation_new'
+A       tut1.txt
+Branch 'Validation_new' set up to track remote branch 'Validation_new' from 'originazure'.
+
+Dinesh.Bhati@INNMBD846ZB53 MINGW64 ~/OneDrive - Worley/Desktop/delete/delete (Validation_new)
+$ git status
+On branch Validation_new
+Your branch is up to date with 'originazure/Validation_new'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   tut1.txt
+
+
+Dinesh.Bhati@INNMBD846ZB53 MINGW64 ~/OneDrive - Worley/Desktop/delete/delete (Validation_new)
+$ dir
+New\ folder       Validation_13_Aug  manage.py   pse               tut1.txt
+New\ folder\ (2)  cloudpse           model.file  requirements.txt
+
+Dinesh.Bhati@INNMBD846ZB53 MINGW64 ~/OneDrive - Worley/Desktop/delete/delete (Validation_new)
+$ git commit -am "test"
+[Validation_new 1654fc1] test
+ 1 file changed, 1 insertion(+)
+ create mode 100644 tut1.txt
+
+Dinesh.Bhati@INNMBD846ZB53 MINGW64 ~/OneDrive - Worley/Desktop/delete/delete (Validation_new)
+$ git push -u originazure Validation_new
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 275 bytes | 137.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Analyzing objects... (3/3) (25 ms)
+remote: Storing packfile... done (36 ms)
+remote: Storing index... done (27 ms)
+To https://dev.azure.com/worleydigital/Demo%20Cloud%20PSE/_git/cloudpse_py_demo
+   7e04f9a..1654fc1  Validation_new -> Validation_new
+Branch 'Validation_new' set up to track remote branch 'Validation_new' from 'originazure'.
+
+Dinesh.Bhati@INNMBD846ZB53 MINGW64 ~/OneDrive - Worley/Desktop/delete/delete (Validation_new)
+$
